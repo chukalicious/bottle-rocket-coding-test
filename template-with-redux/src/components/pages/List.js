@@ -14,14 +14,18 @@ const List = (props) => {
   return (
     <div>
       {list.map((restaurants, i) => (
-        <Detail
-          key={i}
-          category={restaurants.category}
-          name={restaurants.name}
-          imageURL={restaurants.backgroundImageURL}
-          contact={restaurants.contact}
-          location={restaurants.location}
-        ></Detail>
+        <div key={i}>
+          <h2>{restaurants.name}</h2>
+          <h3>{restaurants.category}</h3>
+          <img src={restaurants.backgroundImageURL} alt="dish" />
+          <Detail
+            category={restaurants.category}
+            name={restaurants.name}
+            contact={restaurants.contact}
+            //not all list items have a twitter value
+            location={restaurants.location}
+          ></Detail>
+        </div>
       ))}
     </div>
   );
