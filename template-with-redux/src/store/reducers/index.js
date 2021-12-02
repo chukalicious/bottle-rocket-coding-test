@@ -4,6 +4,6 @@ const initialState = {
   loading: false,
 };
 
-export const restaurantsReducer = (state = initialState, action) => {
-  return null;
-};
+// export const restaurantsReducer = (state = initialState, action) => {
+//   return null;
+// };
