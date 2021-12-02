@@ -9,7 +9,6 @@ export const getRestaurants = () => (dispatch) => {
   axios
     .get("https://s3.amazonaws.com/br-codingexams/restaurants.json")
     .then((res) => {
-      console.log("actions: res: ", res);
       dispatch({ type: RES_SUCCESS, payload: res.data.restaurants });
     })
     .catch((err) => {
