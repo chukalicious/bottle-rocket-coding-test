@@ -9,14 +9,12 @@ import logger from "redux-logger";
 import { composeWithDevTools } from "redux-devtools-extension";
 import reportWebVitals from "./reportWebVitals";
 
+import { restaurantsReducer } from "./store/reducers";
+
 const store = createStore(
-  //reducer variable goes below
-  // userReducer,
+  restaurantsReducer,
   composeWithDevTools(applyMiddleware(thunk, logger))
 );
-
-// Import reducers here:
-// import { userReducer } from "./store/reducers";
 
 ReactDOM.render(
   <React.StrictMode>
