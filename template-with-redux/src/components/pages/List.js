@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { getRestaurants } from "../../store/actions";
+import { restaurantsReducer } from "../../store/reducers";
 
 const List = (props) => {
   const [list, setList] = useState([]);
-  console.log("List: list", list);
 
   useEffect(() => {
     props.getRestaurants();
+    setList(props.restaurants);
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      {list.map((restaurants) => (
+        <p>{restaurants.name}</p>
+      ))}
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => {
