@@ -1,18 +1,13 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { connect } from "react-redux";
+import { getRestaurants } from "../../store/actions";
 
 const List = (props) => {
   const [list, setList] = useState([]);
   console.log("List: list", list);
 
   useEffect(() => {
-    axios
-      .get("https://s3.amazonaws.com/br-codingexams/restaurants.json")
-      .then((res) => setList(res.data.restaurants))
-      .catch((err) => {
-        console.log(err);
-      });
+    props.getRestaurants();
   }, []);
 
   return <div></div>;
@@ -24,5 +19,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default List;
-// export default connect(mapStateToProps, {})(List);
+export default connect(mapStateToProps, { getRestaurants })(List);
