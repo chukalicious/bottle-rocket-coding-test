@@ -22,7 +22,6 @@ const List = (props) => {
             category={restaurants.category}
             name={restaurants.name}
             contact={restaurants.contact}
-            //not all list items have a twitter value
             location={restaurants.location}
           ></Detail>
         </div>
