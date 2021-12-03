@@ -11,3 +11,15 @@ export const HeaderDiv = styled.div`
   border: 4px solid red;
   margin-top: -1.5rem;
 `;
+
+export const IconDiv = styled.div`
+  display: flex;
+  padding: 1rem;
+  marging: 1rem 
+  width: 2.5rem;
+  height: 2.5rem; 
+`;
+
+export const HeaderTitle = styled.h1`
+  font-size: 2rem;
+`;
