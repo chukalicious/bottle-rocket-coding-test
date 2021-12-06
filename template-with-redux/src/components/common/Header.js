@@ -8,8 +8,7 @@ const Header = () => {
 
   return (
     <HeaderDiv>
-      {/* needs to navigate back, not to home */}
-      <IconDiv onClick={(e) => navigate("/")}>
+      <IconDiv onClick={(e) => navigate(-1)}>
         {" "}
         <img src={ic_webBack} alt="back" />
       </IconDiv>
